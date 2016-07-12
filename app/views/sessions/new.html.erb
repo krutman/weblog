@@ -1,0 +1,16 @@
+<% provide(:title, 'Login') %>
+
+<div class="container form-container">
+  <div class="row form-row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h1 class="form-title">Login</h1>
+	    <div class="well">
+        <%= simple_form_for :session, url: sessions_path do |f| %>
+          <%= f.input :email, required: false %>
+          <%= f.input :password, required: false %>
+          <%= f.submit "Login", class: "btn btn-large btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
